@@ -40,13 +40,16 @@ async function main() {
   console.log(`Decoys flagged: ${decoyHits.length}/${expected.decoys.length}`);
   console.log(`Additional flags for review: ${extras.length - decoyHits.length}`);
 
-  if (process.argv.includes("--save")) {
+  const passed = found === expected.claims.length && decoyHits.length === 0;
+  if (process.argv.includes("--save") && !passed) {
+    console.log("Not saving src/data/sample-analysis.json: eval did not pass");
+  } else if (process.argv.includes("--save")) {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const raw = result.claims.map(({ deadline: _d, daysRemaining: _r, status: _s, ...c }) => c);
     writeFileSync("src/data/sample-analysis.json", JSON.stringify(raw, null, 2) + "\n");
     console.log("Saved src/data/sample-analysis.json");
   }
-  process.exit(found === expected.claims.length && decoyHits.length === 0 ? 0 : 1);
+  process.exit(passed ? 0 : 1);
 }
 
 main().catch((e) => {
