@@ -25,6 +25,8 @@ npm run dev                  # http://localhost:3000
 
 Without an API key, the unmodified sample project still works using a cached analysis, and notices are drafted from a template.
 
+When deploying publicly, set `APP_PASSWORD` so that only people with the password can use the app (and spend API credit). The browser asks for it on first visit; any username works.
+
 ## Evaluation
 
 `eval/expected.json` lists the claims hidden in the sample project, plus decoy records that should *not* be flagged.
