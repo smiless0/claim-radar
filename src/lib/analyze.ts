@@ -101,13 +101,14 @@ Review every record and call report_claims with all potential contractor claims.
 
   const res = await client.messages.create({
     model: MODEL,
-    max_tokens: 8000,
+    max_tokens: 16000,
     system: SYSTEM,
     tools: [REPORT_TOOL],
     tool_choice: { type: "auto" },
     messages: [{ role: "user", content: user }],
   });
 
+  if (res.stop_reason === "max_tokens") throw new Error("The claim analysis was cut off before it finished. Please try again.");
   const block = res.content.find((b) => b.type === "tool_use");
   if (!block || block.type !== "tool_use") throw new Error("Model did not return claims");
   const parsed = z.object({ claims: z.array(ClaimSchema) }).parse(block.input);

@@ -40,7 +40,7 @@ export async function draftNotice(project: Project, claim: ScoredClaim, apiKey =
   const sources = project.records.filter((r) => claim.sourceRecordIds.includes(r.id));
   const res = await client.messages.create({
     model: MODEL,
-    max_tokens: 3000,
+    max_tokens: 16000,
     system:
       "You are an Australian construction lawyer drafting a formal written notice of claim on behalf of a contractor to the Superintendent. Be precise, firm and professional. Cite the contract clauses and the project records relied on. Do not invent facts, amounts or dates not in the material; where quantum or delay is not yet known, state that particulars will follow and reserve rights. Output plain text only (no markdown).",
     messages: [
@@ -70,5 +70,6 @@ ${sources.map((r) => `[${r.id}] ${r.date} ${r.subject}\n${r.body}`).join("\n\n")
       },
     ],
   });
+  if (res.stop_reason === "max_tokens") throw new Error("The draft notice was cut off before it finished. Please try again.");
   return res.content.map((b) => (b.type === "text" ? b.text : "")).join("").trim();
 }
