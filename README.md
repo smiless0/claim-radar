@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Claim Radar
 
-## Getting Started
+Contractors often miss valid claims (variations, extensions of time, latent conditions, delay costs) buried in the large volume of project records: emails, RFIs, TQs, site diaries. Sometimes they only spot them after the notice period has passed and a time bar applies.
 
-First, run the development server:
+**Claim Radar** reads project records, flags possible claims, checks each one against the contract's notice provisions (AS 4000-1997 plus any special conditions), shows a countdown to each notice deadline, and drafts the notice of claim.
+
+> Built with [Devin](https://devin.ai) as a small proof of concept. Not legal advice.
+
+## Features
+
+- **Claim detection:** finds possible contractor entitlements across emails, RFIs, TQs, site diaries, minutes and letters. Ignores matters that are the contractor's own risk (subcontractor labour shortages, defects, weather within the allowance).
+- **Contract check:** applies the AS 4000 notice clauses (cl 25, 33, 34, 36, 41) *and* the project's special conditions (e.g. an EOT time bar cut from 28 to 14 days).
+- **Time-bar dashboard:** each claim shows its trigger date, deadline and days remaining: urgent, soon, ok, "notify promptly", or past deadline.
+- **Evidence:** every flag cites the source records with verbatim quotes.
+- **Notice drafting:** generates an editable notice of claim that you can copy or download as a Word document.
+- **Sample project:** a realistic AS 4000 project (*Harbourside Medical Centre - Stage 2*) with 18 records, 5 hidden claims and 5 decoys.
+
+## Quick start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.example .env.local   # add your ANTHROPIC_API_KEY
+npm run dev                  # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Without an API key, the unmodified sample project still works using a cached analysis, and notices are drafted from a template.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Evaluation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`eval/expected.json` lists the claims hidden in the sample project, plus decoy records that should *not* be flagged.
 
-## Learn More
+```bash
+npm run eval            # runs live analysis and prints recall + false positives
+npm run eval -- --save  # also refreshes the cached demo result
+```
 
-To learn more about Next.js, take a look at the following resources:
+## How it works
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Piece | File |
+|---|---|
+| AS 4000 notice provisions (defaults) | `src/lib/as4000.ts` |
+| Claim detection (Claude, structured tool output, validated with zod) | `src/lib/analyze.ts` |
+| Deadline maths (deterministic, not left to the LLM) | `src/lib/deadlines.ts` |
+| Notice drafting | `src/lib/notice.ts` |
+| API routes | `src/app/api/analyze`, `src/app/api/notice` |
+| UI | `src/app/page.tsx`, `src/components/` |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Stack: Next.js 15, TypeScript, Tailwind CSS, Anthropic Claude API.
 
-## Deploy on Vercel
+## Built with Devin
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project was built by [Devin](https://devin.ai) (Cognition's AI software engineer), steered by me through chat. Each change lands as a pull request with a link to the Devin session that wrote it.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Step | My instruction to Devin | What Devin did |
+|---|---|---|
+| 1 | Shared my LinkedIn post describing the idea | Proposed the MVP scope and architecture |
+| 2 | "Build something small using Devin and be able to prove it" | Scoped a 1-2 day slice: detection, time bars, notice drafting, eval |
+| 3 | "Call the repo claim radar" | Scaffolded the app, wrote the sample project with hidden claims and the eval harness, opened the first PR |
+
+*(This table is updated as the project progresses.)*
