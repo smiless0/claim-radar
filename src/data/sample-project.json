@@ -1,0 +1,166 @@
+{
+  "name": "Harbourside Medical Centre - Stage 2",
+  "contractor": "Coastline Builders Pty Ltd",
+  "principal": "Northbridge Health Pty Ltd",
+  "superintendent": "Meridian Project Management (Sarah Chen)",
+  "contractForm": "AS 4000-1997 General Conditions of Contract, as amended by Special Conditions",
+  "asAt": "2026-11-24",
+  "specialConditions": "SC 1 - Superintendent: Meridian Project Management Pty Ltd, represented by Sarah Chen.\nSC 4 - Clause 34.3 is amended by deleting \"28 days\" and replacing it with \"14 days\". A claim for extension of time not made within 14 days after the delay occurs is barred.\nSC 7 - Inclement weather: the Contractor is deemed to have allowed for 5 days of delay per calendar month due to inclement weather. No extension of time is available for inclement weather delays within that allowance.\nSC 9 - Working hours: 7:00am to 6:00pm Monday to Friday, 8:00am to 1:00pm Saturday. Noisy works are permitted within working hours.\nSC 12 - Site information: the geotechnical report by Terrafirm Geotechnical dated 3 March 2026 (Ref TG-2210) forms part of the Site Information.",
+  "records": [
+    {
+      "id": "SD-1013",
+      "type": "site_diary",
+      "date": "2026-10-13",
+      "from": "Dave Morrison (Site Manager)",
+      "subject": "Site diary - Tuesday 13 October 2026",
+      "body": "Weather: fine, 22C. Labour on site: 18. Excavator commenced bulk excavation grid lines A-C. Formwork crew on L1 columns. Toolbox talk on traffic management. Concrete delivery for L1 columns 2:30pm, no issues. Hoarding repaired on eastern boundary."
+    },
+    {
+      "id": "SD-1014",
+      "type": "site_diary",
+      "date": "2026-10-14",
+      "from": "Dave Morrison (Site Manager)",
+      "subject": "Site diary - Wednesday 14 October 2026",
+      "body": "Weather: fine, 24C. Labour on site: 17. Electrician (Bright Spark) on L1 conduits. Excavator hit old buried concrete footings and a slab at approx 1.8m depth around grid C4-C6 - looks like an old basement structure. Some fibro fragments in the fill near C5, possibly asbestos - area taped off and work stopped in that zone. Nothing like this is shown in the Terrafirm geotech report (boreholes BH3 and BH4 show clay and weathered sandstone only). Excavator moved to grid A to keep working. Called hygienist to attend tomorrow. Waste bins swapped."
+    },
+    {
+      "id": "EM-1015",
+      "type": "email",
+      "date": "2026-10-15",
+      "from": "Dave Morrison <dave@coastlinebuilders.com.au>",
+      "to": "Priya Nair <priya@coastlinebuilders.com.au>",
+      "subject": "FW: hygienist results + old footings at C4-C6",
+      "body": "Priya, hygienist confirmed bonded asbestos in the fill around C5. We need a licensed removalist and the old footings need breaking out with the hammer - probably 4-5 days lost in that zone and the lift pit can't start until it's clear. Removalist quote is about $38k plus disposal. I haven't told Meridian yet, can you sort the paperwork? Cheers, Dave"
+    },
+    {
+      "id": "RFI-019",
+      "type": "rfi",
+      "date": "2026-10-16",
+      "from": "Coastline Builders",
+      "to": "Meridian Project Management",
+      "subject": "RFI-019 Paint colour to consult room corridors",
+      "body": "Question: Please confirm paint colour to consult room corridors. Drawing A-501 notes 'refer spec' and spec section 09 91 00 nominates Dulux 'Lexicon Quarter'.\n\nResponse (Sarah Chen, 16/10/2026): Confirmed, Lexicon Quarter as per specification. No change."
+    },
+    {
+      "id": "SD-1019",
+      "type": "site_diary",
+      "date": "2026-10-19",
+      "from": "Dave Morrison (Site Manager)",
+      "subject": "Site diary - Monday 19 October 2026",
+      "body": "Weather: heavy rain from 6am, 38mm. Site closed at 9:30am - unsafe conditions on excavation. Labour sent home. Pumps running in excavation. 1 day lost to rain (2nd rain day this month)."
+    },
+    {
+      "id": "TQ-009",
+      "type": "tq",
+      "date": "2026-10-22",
+      "from": "Meridian Project Management",
+      "to": "Coastline Builders",
+      "subject": "TQ-009 Response - Beam B12 L2 transfer beam",
+      "body": "Technical Query raised by Coastline 12/10/2026: Beam B12 at L2 is shown as 310UB40 on S-201 but the connection detail on S-410 appears to suit a deeper section. Please clarify.\n\nResponse from structural engineer (via Superintendent), 22/10/2026: Beam B12 is to be upgraded to 410UB59.7 to carry revised plant loads from the rooftop AHU relocation. Provide additional 16mm stiffener plates and M24 bolts as per attached sketch SK-14. Contractor to proceed accordingly and incorporate into shop drawings."
+    },
+    {
+      "id": "EM-1023",
+      "type": "email",
+      "date": "2026-10-23",
+      "from": "Tony Russo <tony@brightspark.com.au>",
+      "to": "Dave Morrison <dave@coastlinebuilders.com.au>",
+      "subject": "L1 rough-in running behind",
+      "body": "Dave, sorry mate, two of my sparkies have gone to another job and I'm short staffed. L1 rough-in will be about a week behind our programme. I'll have extra guys back from the 2nd. Tony"
+    },
+    {
+      "id": "RFI-021",
+      "type": "rfi",
+      "date": "2026-10-28",
+      "from": "Coastline Builders",
+      "to": "Meridian Project Management",
+      "subject": "RFI-021 L2 slab penetrations - hydraulic and mechanical",
+      "body": "Question: The L2 slab penetration layout has not been issued. Architectural and services drawings conflict on the location of 14 penetrations for hydraulic risers and mechanical ducts. We require a coordinated penetration layout before the reinforcement can be fixed and the L2 slab poured (programmed 12 November 2026). Please respond by 4 November 2026 to avoid delay.\n\nResponse: [no response at time of issue]"
+    },
+    {
+      "id": "MIN-1029",
+      "type": "minutes",
+      "date": "2026-10-29",
+      "from": "Meridian Project Management",
+      "subject": "Site meeting minutes #14",
+      "body": "Attendees: S. Chen (Meridian), P. Nair, D. Morrison (Coastline), J. Ward (Northbridge Health).\n1. Safety - no incidents. 2. Programme - Contractor reports L1 services slightly behind. 3. RFIs - RFI-021 outstanding, Meridian to follow up with services engineer. 4. Site BBQ for crew on 6 Nov approved. 5. Next meeting 12 Nov."
+    },
+    {
+      "id": "EM-1103",
+      "type": "email",
+      "date": "2026-11-03",
+      "from": "Sarah Chen <sarah.chen@meridianpm.com.au>",
+      "to": "Priya Nair <priya@coastlinebuilders.com.au>",
+      "subject": "Consult rooms - client changes",
+      "body": "Hi Priya, following the user group meeting, Northbridge want an additional 2 double GPOs and 1 data point in each of the 12 consult rooms (so 24 GPOs and 12 data points total), and the floor finish in the consult rooms changed from the specified Polyflor vinyl to Altro Wood Safety sheet vinyl. Can you please just get your trades to proceed so we don't hold up rough-in - we'll paper it up later. Thanks, Sarah"
+    },
+    {
+      "id": "EM-1105",
+      "type": "email",
+      "date": "2026-11-05",
+      "from": "Priya Nair <priya@coastlinebuilders.com.au>",
+      "to": "Tony Russo <tony@brightspark.com.au>",
+      "subject": "Extra GPOs in consult rooms",
+      "body": "Tony, please allow for 24 extra double GPOs and 12 data points in the consult rooms (2 GPOs + 1 data per room) and get them into your rough-in this week. Send me your price when you can. Priya"
+    },
+    {
+      "id": "LT-1106",
+      "type": "letter",
+      "date": "2026-11-06",
+      "from": "Meridian Project Management",
+      "to": "Coastline Builders",
+      "subject": "Notice of defective work - Column C2/L1",
+      "body": "The Superintendent directs the Contractor under clause 29 to rectify honeycombing to column C2 at Level 1 observed during inspection on 5 November 2026. Rectification method to be submitted for review within 5 business days. This work is at the Contractor's cost."
+    },
+    {
+      "id": "EM-1110",
+      "type": "email",
+      "date": "2026-11-10",
+      "from": "Sarah Chen <sarah.chen@meridianpm.com.au>",
+      "to": "Priya Nair <priya@coastlinebuilders.com.au>",
+      "subject": "Noise restrictions - adjacent hospital",
+      "body": "Priya, the hospital next door has complained about noise affecting their day surgery unit. Effective immediately, please stop all concrete cutting, core drilling and jackhammering between 9:00am and 3:00pm, Monday to Friday, until further notice (at least the next two weeks). Quieter works can continue. Regards, Sarah"
+    },
+    {
+      "id": "SD-1112",
+      "type": "site_diary",
+      "date": "2026-11-12",
+      "from": "Dave Morrison (Site Manager)",
+      "subject": "Site diary - Thursday 12 November 2026",
+      "body": "Weather: fine. Labour on site: 21. L2 slab pour CANCELLED - still no penetration layout from Meridian (RFI-021). Reo fixers stood down for the day, concrete order cancelled (cancellation fee $1,850). Pump booking cancelled. Core drilling crew sent home at 9am due to noise restriction - rescheduled to afternoons. Lift pit excavation complete."
+    },
+    {
+      "id": "SD-1116",
+      "type": "site_diary",
+      "date": "2026-11-16",
+      "from": "Dave Morrison (Site Manager)",
+      "subject": "Site diary - Monday 16 November 2026",
+      "body": "Weather: showers. Labour on site: 19. Still waiting on RFI-021 response - L2 slab on hold, critical path. Formwork crew working on stairs. Concrete cutting only possible 3pm-6pm due to noise direction - productivity on cutting crew roughly halved. Electrician progressing consult room rough-in incl. extra GPOs."
+    },
+    {
+      "id": "RFI-021R",
+      "type": "rfi",
+      "date": "2026-11-19",
+      "from": "Meridian Project Management",
+      "to": "Coastline Builders",
+      "subject": "RFI-021 Response - L2 slab penetrations",
+      "body": "Response (Sarah Chen, 19/11/2026): Coordinated L2 penetration layout attached (drawing H-215 rev C / M-215 rev C). Note 3 additional penetrations have been added for the relocated AHU. Apologies for the delay - the services engineer was awaiting client sign-off on the plant relocation."
+    },
+    {
+      "id": "SD-1121",
+      "type": "site_diary",
+      "date": "2026-11-21",
+      "from": "Dave Morrison (Site Manager)",
+      "subject": "Site diary - Saturday 21 November 2026",
+      "body": "Weather: fine. Reo fixing L2 in progress following RFI-021 response. L2 slab pour now booked for 26 November - 2 weeks later than programme. Downstream trades (L2 framing, services) all pushed out. Site BBQ leftovers cleared."
+    },
+    {
+      "id": "EM-1123",
+      "type": "email",
+      "date": "2026-11-23",
+      "from": "Jenny Ward <jenny.ward@northbridgehealth.com.au>",
+      "to": "Priya Nair <priya@coastlinebuilders.com.au>",
+      "subject": "Thanks for the site tour",
+      "body": "Hi Priya, thanks for the tour last week, the board members were impressed with progress. Looking forward to seeing the L2 slab go in. Best, Jenny"
+    }
+  ]
+}

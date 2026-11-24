@@ -1,0 +1,268 @@
+[
+  {
+    "category": "extension_of_time",
+    "title": "EOT - noise restriction on cutting, coring and jackhammering",
+    "summary": "The 9am-3pm restriction on noisy works from 10 Nov, continuing for at least two weeks, delays concrete cutting and core drilling and halves productivity. It may delay the works and is a direction of the Superintendent, so it is a qualifying cause for EOT. The 14-day time bar under SC 4 runs out today.",
+    "triggerDate": "2026-11-10",
+    "sourceRecordIds": [
+      "EM-1110",
+      "SD-1112",
+      "SD-1116"
+    ],
+    "evidence": [
+      {
+        "recordId": "EM-1110",
+        "quote": "Effective immediately, please stop all concrete cutting, core drilling and jackhammering between 9:00am and 3:00pm"
+      },
+      {
+        "recordId": "SD-1116",
+        "quote": "productivity on cutting crew roughly halved"
+      }
+    ],
+    "clause": "AS 4000 cl 34.2 and 34.3 as amended by SC 4 (14 days)",
+    "noticeRequirement": "Written EOT claim with evidence within 14 days after the delay occurs, i.e. by 24 Nov 2026, which is the review date. Lodge today, and give updated claims if the restriction continues.",
+    "noticeDays": 14,
+    "confidence": "medium",
+    "reasoning": "The restriction took effect on 10 Nov 2026, and 14 days gives 24 Nov 2026. The claim is urgent. Whether the delay affects the critical path is unclear, since the diary does not show that work was critical, so the claim is medium confidence. Lodging protects the position, and the claim can be updated for any extension of the restriction.",
+    "id": "C9"
+  },
+  {
+    "category": "extension_of_time",
+    "title": "EOT - late L2 slab penetration layout (RFI-021)",
+    "summary": "Coastline asked for a coordinated L2 penetration layout by 4 Nov. Meridian did not respond until 19 Nov, so the L2 slab pour programmed for 12 Nov was cancelled and rebooked for 26 Nov, about 2 weeks late. The delay is critical path and flows to downstream trades. Meridian's response shows it was caused by the Principal's delay in signing off the plant relocation.",
+    "triggerDate": "2026-11-12",
+    "sourceRecordIds": [
+      "RFI-021",
+      "MIN-1029",
+      "SD-1112",
+      "SD-1116",
+      "RFI-021R",
+      "SD-1121"
+    ],
+    "evidence": [
+      {
+        "recordId": "RFI-021",
+        "quote": "Please respond by 4 November 2026 to avoid delay."
+      },
+      {
+        "recordId": "SD-1112",
+        "quote": "L2 slab pour CANCELLED - still no penetration layout from Meridian (RFI-021)."
+      },
+      {
+        "recordId": "RFI-021R",
+        "quote": "Apologies for the delay - the services engineer was awaiting client sign-off on the plant relocation."
+      },
+      {
+        "recordId": "SD-1121",
+        "quote": "L2 slab pour now booked for 26 November - 2 weeks later than programme."
+      }
+    ],
+    "clause": "AS 4000 cl 34.2 and 34.3 as amended by SC 4 (14 days)",
+    "noticeRequirement": "Written EOT claim with evidence within 14 days after the delay occurs, i.e. by 26 Nov 2026 if the delay occurred on 12 Nov (the planned pour date). If an earlier delay date is argued (e.g. 4 Nov, the requested response date), the period would already have expired. Lodge the claim immediately, and give cl 34.2 notice if not yet given.",
+    "noticeDays": 14,
+    "confidence": "high",
+    "reasoning": "The late issue of documents by the Superintendent is a qualifying cause of delay. The delay to the L2 pour first actually occurred on 12 Nov, when the pour was cancelled. The 14 days under SC 4 run to 26 Nov 2026, two days after the review date. The site diary says the pour is on the critical path, and it is now 2 weeks late. Check whether any earlier written notice was given, because the delay may arguably have started earlier (4 Nov). The weather allowance does not apply to this claim.",
+    "id": "C5"
+  },
+  {
+    "category": "variation",
+    "title": "Variation - additional GPOs/data points and floor finish change in consult rooms",
+    "summary": "The Superintendent directed, on behalf of Northbridge, 24 extra double GPOs and 12 data points in the 12 consult rooms, and a change of floor finish from Polyflor vinyl to Altro Wood Safety sheet vinyl. Sarah said to proceed and 'paper it up later'. Coastline instructed its electrician and the work is under way.",
+    "triggerDate": "2026-11-03",
+    "sourceRecordIds": [
+      "EM-1103",
+      "EM-1105",
+      "SD-1116"
+    ],
+    "evidence": [
+      {
+        "recordId": "EM-1103",
+        "quote": "Northbridge want an additional 2 double GPOs and 1 data point in each of the 12 consult rooms (so 24 GPOs and 12 data points total), and the floor finish in the consult rooms changed from the specified Polyflor vinyl to Altro Wood Safety sheet vinyl."
+      },
+      {
+        "recordId": "EM-1103",
+        "quote": "Can you please just get your trades to proceed so we don't hold up rough-in - we'll paper it up later."
+      },
+      {
+        "recordId": "SD-1116",
+        "quote": "Electrician progressing consult room rough-in incl. extra GPOs."
+      }
+    ],
+    "clause": "AS 4000 cl 36 and cl 41.1 (not amended by Special Conditions)",
+    "noticeRequirement": "Written notice of the claim (general basis and quantum) within 28 days after the direction, i.e. by 1 Dec 2026. Do not rely on the 'paper it up later' statement. Send a written notice and request a formal variation direction. Also get the electrician's price and the Altro price.",
+    "noticeDays": 28,
+    "confidence": "high",
+    "reasoning": "This is an informal written direction from the Superintendent that adds work and changes a specified material. The trigger is the date of the email, 3 Nov 2026, and 28 days gives 1 Dec 2026. Priya's email of 5 Nov to Tony Russo shows the work was instructed, and the 16 Nov diary shows it under way. The 'paper it up later' statement does not remove the notice requirement.",
+    "id": "C4"
+  },
+  {
+    "category": "latent_condition",
+    "title": "Latent condition - buried footings/slab and bonded asbestos at C4-C6",
+    "summary": "Bulk excavation hit old buried concrete footings and a slab (old basement structure) at about 1.8m depth around C4-C6, with bonded asbestos in the fill near C5. None of this is shown in the Terrafirm geotech report (SC 12 Site Information), which shows only clay and weathered sandstone. Coastline has costs for a licensed removalist (about $38k plus disposal), hygienist and breaking out the footings, and may be entitled to cost and time under cl 25.",
+    "triggerDate": "2026-10-14",
+    "sourceRecordIds": [
+      "SD-1014",
+      "EM-1015"
+    ],
+    "evidence": [
+      {
+        "recordId": "SD-1014",
+        "quote": "Excavator hit old buried concrete footings and a slab at approx 1.8m depth around grid C4-C6 - looks like an old basement structure."
+      },
+      {
+        "recordId": "SD-1014",
+        "quote": "Nothing like this is shown in the Terrafirm geotech report (boreholes BH3 and BH4 show clay and weathered sandstone only)."
+      },
+      {
+        "recordId": "EM-1015",
+        "quote": "I haven't told Meridian yet, can you sort the paperwork?"
+      }
+    ],
+    "clause": "AS 4000 cl 25.1 (not amended by Special Conditions); SC 12 (geotech report TG-2210 forms part of Site Information); cl 41.1 for costs",
+    "noticeRequirement": "Written notice to the Superintendent promptly, and where possible before the condition is further disturbed. Notice has apparently not been given (Dave: 'I haven't told Meridian yet'). Give written notice immediately, identifying the physical conditions, the difference from the geotech report and the intended removal and break-out costs. Also give a cl 41.1 cost claim notice.",
+    "noticeDays": null,
+    "confidence": "high",
+    "reasoning": "The conditions were first discovered on 14 Oct 2026 and recorded the same day. Cl 25.1 requires prompt notice. The contractor had not told the Superintendent by 15 Oct, and the work has been disturbed since. Notice is already late, and a prejudice or time-bar argument is possible, so notice should go immediately. The geotech report in SC 12 shows only clay and weathered sandstone, which supports the argument that the conditions differ from what a competent contractor would have anticipated at tender.",
+    "id": "C1"
+  },
+  {
+    "category": "suspension",
+    "title": "Direction restricting noisy works 9am-3pm - cost claim (adjacent hospital noise)",
+    "summary": "On 10 Nov the Superintendent directed Coastline to stop all concrete cutting, core drilling and jackhammering between 9:00am and 3:00pm Monday to Friday, until further notice (at least 2 weeks). SC 9 permits noisy works during 7am-6pm, so the direction cuts back an existing right and is not Coastline's risk. Crews were sent home and cutting productivity was roughly halved.",
+    "triggerDate": "2026-11-10",
+    "sourceRecordIds": [
+      "EM-1110",
+      "SD-1112",
+      "SD-1116"
+    ],
+    "evidence": [
+      {
+        "recordId": "EM-1110",
+        "quote": "Effective immediately, please stop all concrete cutting, core drilling and jackhammering between 9:00am and 3:00pm, Monday to Friday, until further notice (at least the next two weeks)."
+      },
+      {
+        "recordId": "SD-1112",
+        "quote": "Core drilling crew sent home at 9am due to noise restriction - rescheduled to afternoons."
+      },
+      {
+        "recordId": "SD-1116",
+        "quote": "Concrete cutting only possible 3pm-6pm due to noise direction - productivity on cutting crew roughly halved."
+      }
+    ],
+    "clause": "AS 4000 cl 33 (suspension) and/or cl 36 (direction changing working methods/hours), cl 41.1; SC 9 (working hours permit noisy works)",
+    "noticeRequirement": "Written notice of the claim for extra costs within 28 days after the contractor first knew of the facts, i.e. by 8 Dec 2026. Characterise it alternatively as a variation or a partial suspension.",
+    "noticeDays": 28,
+    "confidence": "medium",
+    "reasoning": "The direction is from the Superintendent on 10 Nov 2026, and the cause is a third party complaint, not the contractor. SC 9 allows noisy works within working hours, so the restriction is an extra constraint. It is arguably a partial suspension or a variation, and the notice period is the same either way. 10 Nov plus 28 days gives 8 Dec.",
+    "id": "C8"
+  },
+  {
+    "category": "delay_costs",
+    "title": "Delay costs - L2 slab pour cancellation and prolongation due to late RFI-021 response",
+    "summary": "The late response to RFI-021 caused the L2 pour to be cancelled, with a $1,850 concrete cancellation fee, pump cancellation and reo fixers stood down. The pour moved about 2 weeks, with site-establishment and prolongation costs on top. These may be recoverable as delay costs for the Principal's or Superintendent's default.",
+    "triggerDate": "2026-11-12",
+    "sourceRecordIds": [
+      "SD-1112",
+      "SD-1116",
+      "RFI-021R",
+      "SD-1121"
+    ],
+    "evidence": [
+      {
+        "recordId": "SD-1112",
+        "quote": "Reo fixers stood down for the day, concrete order cancelled (cancellation fee $1,850). Pump booking cancelled."
+      },
+      {
+        "recordId": "SD-1116",
+        "quote": "Still waiting on RFI-021 response - L2 slab on hold, critical path."
+      },
+      {
+        "recordId": "SD-1121",
+        "quote": "Downstream trades (L2 framing, services) all pushed out."
+      }
+    ],
+    "clause": "AS 4000 cl 34.9 and cl 41.1 (not amended by Special Conditions on the 28-day period). Delay costs depend on an EOT being granted.",
+    "noticeRequirement": "Written notice of the claim within 28 days after the contractor first knew of the facts, i.e. by 10 Dec 2026. Lodge it with the EOT claim, and keep records of the costs.",
+    "noticeDays": 28,
+    "confidence": "high",
+    "reasoning": "The costs were incurred from 12 Nov 2026, when the pour was cancelled. Cl 34.9 delay costs require an EOT for a compensable cause, which is Principal or Superintendent default (late documents). 12 Nov plus 28 days gives 10 Dec. Possible earlier trigger of 4 Nov, so notify now.",
+    "id": "C6"
+  },
+  {
+    "category": "variation",
+    "title": "Variation - 3 additional L2 slab penetrations for relocated AHU",
+    "summary": "The RFI-021 response issued revised drawings (H-215/M-215 rev C) that add 3 penetrations for the relocated AHU. That extends the documented scope beyond the original 14 penetrations and is a variation.",
+    "triggerDate": "2026-11-19",
+    "sourceRecordIds": [
+      "RFI-021R"
+    ],
+    "evidence": [
+      {
+        "recordId": "RFI-021R",
+        "quote": "Note 3 additional penetrations have been added for the relocated AHU."
+      }
+    ],
+    "clause": "AS 4000 cl 36 and cl 41.1",
+    "noticeRequirement": "Written notice of the claim (general basis and quantum) within 28 days after the response, i.e. by 17 Dec 2026.",
+    "noticeDays": 28,
+    "confidence": "medium",
+    "reasoning": "The RFI response, dated 19 Nov 2026, changes the design by adding penetrations for the AHU relocation, which is a client-driven change. The cost may be small but the claim should be preserved, together with any extra reo or trimmers needed.",
+    "id": "C7"
+  },
+  {
+    "category": "extension_of_time",
+    "title": "EOT - latent condition (asbestos/old footings) delay to C4-C6 zone and lift pit",
+    "summary": "Work in the C4-C6 zone stopped on 14 Oct for asbestos and old footings. Coastline estimates 4-5 days lost, and the lift pit could not start until the zone was clear. A latent condition is a qualifying cause of delay, but the EOT claim is subject to the shortened 14-day time bar.",
+    "triggerDate": "2026-10-14",
+    "sourceRecordIds": [
+      "SD-1014",
+      "EM-1015",
+      "SD-1112"
+    ],
+    "evidence": [
+      {
+        "recordId": "EM-1015",
+        "quote": "probably 4-5 days lost in that zone and the lift pit can't start until it's clear"
+      },
+      {
+        "recordId": "SD-1014",
+        "quote": "area taped off and work stopped in that zone"
+      },
+      {
+        "recordId": "SD-1112",
+        "quote": "Lift pit excavation complete."
+      }
+    ],
+    "clause": "AS 4000 cl 34.2 and 34.3 as amended by SC 4 (14 days, not 28)",
+    "noticeRequirement": "Written EOT claim with evidence of the facts within 14 days after the delay occurs (SC 4). Late claims are barred. Also give prompt written notice of the delay under cl 34.2.",
+    "noticeDays": 14,
+    "confidence": "low",
+    "reasoning": "The delay began on 14 Oct, when work stopped in the zone. The 14-day period under SC 4 ran to about 28 Oct 2026, so the claim may already be time-barred unless an earlier written notice or a later delay date can be shown. The lift pit excavation was complete by 12 Nov, so impact on the critical path and practical completion is uncertain. Check the records and any notices already given, and consider arguing continuing or later delay effects. Raise it anyway to preserve the position.",
+    "id": "C2"
+  },
+  {
+    "category": "variation",
+    "title": "Variation - upgrade of beam B12 to 410UB59.7 with stiffeners (TQ-009)",
+    "summary": "The TQ-009 response directed upgrading beam B12 from 310UB40 to 410UB59.7, with extra 16mm stiffener plates and M24 bolts per SK-14, to carry revised plant loads from the AHU relocation. This changes the scope and is a variation, even though it was issued as a TQ response.",
+    "triggerDate": "2026-10-22",
+    "sourceRecordIds": [
+      "TQ-009"
+    ],
+    "evidence": [
+      {
+        "recordId": "TQ-009",
+        "quote": "Beam B12 is to be upgraded to 410UB59.7 to carry revised plant loads from the rooftop AHU relocation."
+      },
+      {
+        "recordId": "TQ-009",
+        "quote": "Contractor to proceed accordingly and incorporate into shop drawings."
+      }
+    ],
+    "clause": "AS 4000 cl 36 and cl 41.1 (not amended by Special Conditions)",
+    "noticeRequirement": "Written notice of the claim (general basis and quantum) within 28 days after the contractor first knew of the facts, i.e. by 19 Nov 2026. This is already past, so notice should go immediately. Also consider whether an EOT is claimable for any delay caused by the revised steel supply and shop drawings (14-day limit under SC 4).",
+    "noticeDays": 28,
+    "confidence": "high",
+    "reasoning": "The direction, given by the structural engineer via the Superintendent on 22 Oct 2026, upgrades the section and adds stiffeners and bolts. It is a change driven by a Principal-side plant relocation, not a clarification of existing scope. The 28 days ran to 19 Nov 2026, before the review date, so confirm whether any earlier written notice was given. If not, notify at once and rely on the Superintendent's direction and the absence of prejudice.",
+    "id": "C3"
+  }
+]

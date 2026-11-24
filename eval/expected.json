@@ -1,0 +1,11 @@
+{
+  "project": "src/data/sample-project.json",
+  "claims": [
+    { "name": "Latent condition - buried footings and asbestos at C4-C6", "categories": ["latent_condition"], "records": ["SD-1014", "EM-1015"] },
+    { "name": "Variation - beam B12 upgrade (TQ-009)", "categories": ["variation"], "records": ["TQ-009"] },
+    { "name": "Variation - extra GPOs, data points and Altro flooring", "categories": ["variation"], "records": ["EM-1103"] },
+    { "name": "EOT - late RFI-021 response delayed L2 slab pour", "categories": ["extension_of_time", "delay_costs"], "records": ["RFI-021", "SD-1112", "RFI-021R", "SD-1121"] },
+    { "name": "Restriction on noisy works (9am-3pm) outside contract working-hours regime", "categories": ["suspension", "delay_costs", "variation", "other"], "records": ["EM-1110"] }
+  ],
+  "decoys": ["RFI-019", "SD-1019", "EM-1023", "LT-1106", "EM-1123"]
+}
