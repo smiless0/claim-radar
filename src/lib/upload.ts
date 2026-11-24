@@ -19,7 +19,7 @@ function guessType(name: string, text: string): RecordType {
 const MONTHS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
 
 function parseDate(text: string): string | null {
-  const iso = text.match(/\b(20\d\d)-(\d\d)-(\d\d)\b/);
+  const iso = text.match(/\b(20\d\d)-(\d\d)-(\d\d)(?!\d)/);
   if (iso) return iso[0];
   const au = text.match(/\b(\d{1,2})\/(\d{1,2})\/(20\d\d)\b/);
   if (au) return `${au[3]}-${au[2].padStart(2, "0")}-${au[1].padStart(2, "0")}`;
@@ -32,10 +32,13 @@ function guessDate(text: string, fallback: Date): string {
   if (header) {
     const numeric = parseDate(header);
     if (numeric) return numeric;
-    const rfc = header.match(/\b(\d{1,2})\s+(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+(\d{4})\b/i);
-    if (rfc) {
-      const month = MONTHS.indexOf(rfc[2].toLowerCase()) + 1;
-      return `${rfc[3]}-${String(month).padStart(2, "0")}-${rfc[1].padStart(2, "0")}`;
+    const mon = "(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\\.?";
+    const dayFirst = header.match(new RegExp(`\\b(\\d{1,2})\\s+${mon}\\s+(\\d{4})\\b`, "i"));
+    const monthFirst = header.match(new RegExp(`\\b${mon}\\s+(\\d{1,2}),?\\s+(\\d{4})\\b`, "i"));
+    const [day, name, year] = dayFirst ? [dayFirst[1], dayFirst[2], dayFirst[3]] : monthFirst ? [monthFirst[2], monthFirst[1], monthFirst[3]] : [];
+    if (day && name && year) {
+      const month = MONTHS.indexOf(name.toLowerCase()) + 1;
+      return `${year}-${String(month).padStart(2, "0")}-${day.padStart(2, "0")}`;
     }
   }
   return parseDate(text) ?? localIsoDate(fallback);
