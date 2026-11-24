@@ -13,6 +13,9 @@ export async function POST(req: Request) {
   if (!project?.records?.length) {
     return NextResponse.json({ error: "Add at least one project record." }, { status: 400 });
   }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(project.asAt ?? "")) {
+    return NextResponse.json({ error: "Set a review date before scanning." }, { status: 400 });
+  }
   if (!process.env.ANTHROPIC_API_KEY) {
     if (isUnchangedSample(project) && (sampleAnalysis as DetectedClaim[]).length) {
       return NextResponse.json(toResult(sampleAnalysis as DetectedClaim[], project.asAt, true));
