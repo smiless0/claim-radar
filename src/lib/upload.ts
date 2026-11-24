@@ -27,18 +27,26 @@ function guessDate(text: string, fallback: Date): string {
   return localIsoDate(fallback);
 }
 
-export async function filesToRecords(files: FileList | File[]): Promise<ProjectRecord[]> {
+export async function filesToRecords(files: FileList | File[], existingIds: string[] = []): Promise<ProjectRecord[]> {
   const out: ProjectRecord[] = [];
+  const used = new Set(existingIds);
+  const uniqueId = (base: string) => {
+    let id = base;
+    for (let n = 2; used.has(id); n++) id = `${base}-${n}`;
+    used.add(id);
+    return id;
+  };
   for (const file of Array.from(files)) {
     const text = await file.text();
     if (file.name.endsWith(".json")) {
       const data = JSON.parse(text);
-      out.push(...(Array.isArray(data) ? data : data.records ?? []));
+      const recs: ProjectRecord[] = Array.isArray(data) ? data : data.records ?? [];
+      out.push(...recs.map((r) => ({ ...r, id: uniqueId(r.id) })));
       continue;
     }
     const subject = text.match(/^subject:\s*(.+)$/im)?.[1]?.trim() ?? file.name.replace(/\.[^.]+$/, "");
     out.push({
-      id: file.name.replace(/\.[^.]+$/, "").slice(0, 24),
+      id: uniqueId(file.name.replace(/\.[^.]+$/, "").slice(0, 24)),
       type: guessType(file.name, text),
       date: guessDate(text, new Date(file.lastModified)),
       from: text.match(/^from:\s*(.+)$/im)?.[1]?.trim(),

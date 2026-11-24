@@ -108,7 +108,7 @@ export default function Home() {
                 accept=".txt,.md,.eml,.json"
                 className="hidden"
                 onChange={async (e) => {
-                  if (e.target.files?.length) update({ records: [...project.records, ...(await filesToRecords(e.target.files))] });
+                  if (e.target.files?.length) update({ records: [...project.records, ...(await filesToRecords(e.target.files, project.records.map((r) => r.id)))] });
                   e.target.value = "";
                 }}
               />
