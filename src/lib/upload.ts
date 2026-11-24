@@ -16,15 +16,29 @@ function guessType(name: string, text: string): RecordType {
   return "other";
 }
 
-function guessDate(text: string, fallback: Date): string {
-  const header = text.match(/^date:\s*(.+)$/im)?.[1];
-  const sent = header ? new Date(header.trim()) : null;
-  if (sent && !isNaN(sent.getTime())) return localIsoDate(sent);
+const MONTHS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+
+function parseDate(text: string): string | null {
   const iso = text.match(/\b(20\d\d)-(\d\d)-(\d\d)\b/);
   if (iso) return iso[0];
   const au = text.match(/\b(\d{1,2})\/(\d{1,2})\/(20\d\d)\b/);
   if (au) return `${au[3]}-${au[2].padStart(2, "0")}-${au[1].padStart(2, "0")}`;
-  return localIsoDate(fallback);
+  return null;
+}
+
+function guessDate(text: string, fallback: Date): string {
+  const headerBlock = text.split(/\r?\n\s*\r?\n/)[0];
+  const header = headerBlock.match(/^date:\s*(.+)$/im)?.[1]?.trim();
+  if (header) {
+    const numeric = parseDate(header);
+    if (numeric) return numeric;
+    const rfc = header.match(/\b(\d{1,2})\s+(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+(\d{4})\b/i);
+    if (rfc) {
+      const month = MONTHS.indexOf(rfc[2].toLowerCase()) + 1;
+      return `${rfc[3]}-${String(month).padStart(2, "0")}-${rfc[1].padStart(2, "0")}`;
+    }
+  }
+  return parseDate(text) ?? localIsoDate(fallback);
 }
 
 export async function filesToRecords(files: FileList | File[], existingIds: string[] = []): Promise<ProjectRecord[]> {
