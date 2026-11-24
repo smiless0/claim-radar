@@ -1,4 +1,5 @@
 import type { ProjectRecord, RecordType } from "./types";
+import { localIsoDate } from "./deadlines";
 
 const PREFIXES: [RegExp, RecordType][] = [
   [/^rfi/i, "rfi"],
@@ -16,11 +17,14 @@ function guessType(name: string, text: string): RecordType {
 }
 
 function guessDate(text: string, fallback: Date): string {
+  const header = text.match(/^date:\s*(.+)$/im)?.[1];
+  const sent = header ? new Date(header.trim()) : null;
+  if (sent && !isNaN(sent.getTime())) return localIsoDate(sent);
   const iso = text.match(/\b(20\d\d)-(\d\d)-(\d\d)\b/);
   if (iso) return iso[0];
   const au = text.match(/\b(\d{1,2})\/(\d{1,2})\/(20\d\d)\b/);
   if (au) return `${au[3]}-${au[2].padStart(2, "0")}-${au[1].padStart(2, "0")}`;
-  return fallback.toISOString().slice(0, 10);
+  return localIsoDate(fallback);
 }
 
 export async function filesToRecords(files: FileList | File[]): Promise<ProjectRecord[]> {
