@@ -6,7 +6,7 @@ export function middleware(req: NextRequest) {
   if (!password) return NextResponse.next();
   const [scheme, encoded] = (req.headers.get("authorization") ?? "").split(" ");
   if (scheme === "Basic" && encoded) {
-    const decoded = atob(encoded);
+    const decoded = new TextDecoder().decode(Uint8Array.from(atob(encoded), (c) => c.charCodeAt(0)));
     if (decoded.slice(decoded.indexOf(":") + 1) === password) return NextResponse.next();
   }
   return new NextResponse("Password required", {
