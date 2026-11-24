@@ -22,9 +22,10 @@ async function main() {
   console.log(`\nClaim Radar eval - ${project.name} (${project.records.length} records, ${secs}s, ${result.model})\n`);
   let found = 0;
   for (const exp of expected.claims) {
-    const hit = result.claims.find(
-      (c) => !matched.has(c.id) && exp.categories.includes(c.category) && c.sourceRecordIds.some((r) => exp.records.includes(r))
-    );
+    const overlap = (ids: string[]) => ids.filter((r) => exp.records.includes(r)).length;
+    const hit = result.claims
+      .filter((c) => !matched.has(c.id) && exp.categories.includes(c.category) && overlap(c.sourceRecordIds) > 0)
+      .sort((a, b) => overlap(b.sourceRecordIds) / b.sourceRecordIds.length - overlap(a.sourceRecordIds) / a.sourceRecordIds.length)[0];
     if (hit) {
       matched.add(hit.id);
       found++;
@@ -33,11 +34,11 @@ async function main() {
   }
   const extras = result.claims.filter((c) => !matched.has(c.id));
   const decoyHits = extras.filter((c) => c.sourceRecordIds.every((r) => expected.decoys.includes(r)));
-  for (const c of extras) console.log(`EXTRA   ${c.title} (${c.sourceRecordIds.join(", ")})`);
+  for (const c of extras) console.log(`ALSO    ${c.title} (${c.sourceRecordIds.join(", ")})`);
 
   console.log(`\nRecall: ${found}/${expected.claims.length} hidden claims found`);
   console.log(`Decoys flagged: ${decoyHits.length}/${expected.decoys.length}`);
-  console.log(`Other extra flags: ${extras.length - decoyHits.length}`);
+  console.log(`Additional flags for review: ${extras.length - decoyHits.length}`);
 
   if (process.argv.includes("--save")) {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars

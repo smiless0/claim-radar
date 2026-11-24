@@ -4,7 +4,7 @@ import { rulesAsText } from "./as4000";
 import { scoreClaim, sortClaims } from "./deadlines";
 import type { AnalysisResult, DetectedClaim, Project } from "./types";
 
-export const MODEL = process.env.ANTHROPIC_MODEL || "claude-sonnet-4-5";
+export const MODEL = process.env.ANTHROPIC_MODEL || "claude-sonnet-5-5";
 
 const ClaimSchema = z.object({
   category: z.enum(["variation", "extension_of_time", "latent_condition", "delay_costs", "suspension", "other"]),
@@ -67,7 +67,8 @@ Rules:
 - Determine the trigger date as the applicable clause specifies (e.g. EOT: the date the delay occurs; cl 41: the date the contractor first knew or should reasonably have known of the facts).
 - ALWAYS apply the special conditions: they override the general conditions (e.g. a shortened time bar).
 - Evidence quotes must be verbatim extracts from the records.
-- Do not flag events occurring after the review date.`;
+- Do not flag events occurring after the review date.
+- Respond ONLY by calling the report_claims tool once with all claims.`;
 
 export async function analyzeProject(project: Project, apiKey = process.env.ANTHROPIC_API_KEY): Promise<AnalysisResult> {
   if (!apiKey) throw new Error("ANTHROPIC_API_KEY is not set");
@@ -103,7 +104,7 @@ Review every record and call report_claims with all potential contractor claims.
     max_tokens: 8000,
     system: SYSTEM,
     tools: [REPORT_TOOL],
-    tool_choice: { type: "tool", name: REPORT_TOOL.name },
+    tool_choice: { type: "auto" },
     messages: [{ role: "user", content: user }],
   });
 
