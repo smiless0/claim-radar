@@ -53,7 +53,7 @@ Stack: Next.js 15, TypeScript, Tailwind CSS, Anthropic Claude API.
 
 ## Built with Devin
 
-This project was built by [Devin](https://devin.ai) (Cognition's AI software engineer), steered by me through chat. Each change lands as a pull request with a link to the Devin session that wrote it.
+This project was built by [Devin](https://devin.ai) (an AI software engineer), steered by me through chat. Each change lands as a pull request with a link to the Devin session that wrote it.
 
 | Step | My instruction to Devin | What Devin did |
 |---|---|---|
