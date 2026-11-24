@@ -231,7 +231,7 @@ export default function Home() {
           title={`Draft notice - ${notice.claim.title}`}
           onClose={() => setNotice(null)}
           footer={
-            notice.text && (
+            notice.text !== null && (
               <>
                 <button onClick={() => navigator.clipboard.writeText(notice.text!)} className="rounded-lg border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50">
                   Copy
@@ -243,7 +243,7 @@ export default function Home() {
             )
           }
         >
-          {notice.text ? (
+          {notice.text !== null ? (
             <textarea
               value={notice.text}
               onChange={(e) => setNotice({ ...notice, text: e.target.value })}
