@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import sample from "@/data/sample-project.json";
 import type { AnalysisResult, Project, ScoredClaim } from "@/lib/types";
 import { filesToRecords } from "@/lib/upload";
+import { localIsoDate } from "@/lib/deadlines";
 import { ClaimCard } from "@/components/ClaimCard";
 import { Modal } from "@/components/Modal";
 import { RECORD_LABEL, fmtDate } from "@/components/ui";
@@ -13,7 +14,7 @@ const EMPTY: Project = {
   principal: "Principal",
   superintendent: "Superintendent",
   contractForm: "AS 4000-1997 General Conditions of Contract",
-  asAt: new Date().toISOString().slice(0, 10),
+  asAt: localIsoDate(),
   specialConditions: "",
   records: [],
 };

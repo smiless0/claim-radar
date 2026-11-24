@@ -3,6 +3,11 @@ import type { DetectedClaim, ScoredClaim } from "./types";
 const DAY_MS = 86_400_000;
 const toUtc = (iso: string) => Date.UTC(+iso.slice(0, 4), +iso.slice(5, 7) - 1, +iso.slice(8, 10));
 
+export function localIsoDate(d: Date = new Date()): string {
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+}
+
 export function addDays(iso: string, days: number): string {
   return new Date(toUtc(iso) + days * DAY_MS).toISOString().slice(0, 10);
 }
