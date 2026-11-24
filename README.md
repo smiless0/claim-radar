@@ -15,6 +15,8 @@ Contractors often miss valid claims (variations, extensions of time, latent cond
 - **Notice drafting:** generates an editable notice of claim that you can copy or download as a Word document.
 - **Sample project:** a realistic AS 4000 project (*Harbourside Medical Centre - Stage 2*) with 18 records, 5 hidden claims and 5 decoys.
 
+**Live demo:** https://claim-radar-three.vercel.app (password-protected; ask the author for access)
+
 ## Quick start
 
 ```bash
